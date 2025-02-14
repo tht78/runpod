@@ -1,5 +1,6 @@
 # FROM pytorch/pytorch:2.0.1-cuda11.8-cudnn8-runtime
 FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+# runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 
 # Install git
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -18,3 +19,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #       sleep 3600; \
 #     fi \
 # "]
+CMD [ "/start.sh" ]
